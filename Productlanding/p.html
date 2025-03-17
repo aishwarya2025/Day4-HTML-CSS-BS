@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Titan Chronograph - Premium Men's Watch</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+   
+    :root {
+      --primary: #0a3d62;
+      --secondary: #3c6382;
+      --accent: #f39c12;
+      --light: #f5f6fa;
+      --dark: #2c3e50;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--dark);
+    }
+    
+   
+    .navbar {
+      background-color: var(--primary);
+      padding: 15px 0;
+    }
+    
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 28px;
+      color: white !important;
+    }
+    
+    .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, 0.9) !important;
+      font-weight: 500;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: var(--accent) !important;
+    }
+    
+   
+    .hero {
+      background-image: linear-gradient(rgba(10, 61, 98, 0.7), rgba(10, 61, 98, 0.7)), url('/api/placeholder/1920/700');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 0;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .btn-cta {
+      background-color: var(--accent);
+      color: white;
+      padding: 12px 30px;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .btn-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      background-color: #e67e22;
+      color: white;
+    }
+    
+    
+    .features {
+      padding: 80px 0;
+      background-color: var(--light);
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--accent);
+    }
+    
+    .feature-card {
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-icon {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    
+    .card-title {
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    
+    .testimonials {
+      padding: 80px 0;
+      background-color: var(--secondary);
+      color: white;
+    }
+    
+    .testimonial-item {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 30px;
+      margin: 15px 0;
+      position: relative;
+    }
+    
+    .testimonial-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      margin-bottom: 20px;
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    .testimonial-author {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    
+    .testimonial-position {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    
+    .testimonial-rating {
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+    
+    
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 60px 0 30px;
+      text-align: center;
+    }
+    
+    .footer-title {
+      font-weight: 600;
+      margin-bottom: 25px;
+      font-size: 20px;
+      text-align: center;
+    }
+    
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      background-color: var(--accent);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+   
+    @media (max-width: 768px) {
+      .hero {
+        padding: 80px 0;
+      }
+      
+      .hero h1 {
+        font-size: 36px;
+      }
+      
+      .testimonial-item {
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-watch me-2"></i>TITAN
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ 
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="hero" style="background-image: linear-gradient(rgba(10, 61, 98, 0.7), rgba(10, 61, 98, 0.7)), url('https://c4.wallpaperflare.com/wallpaper/2/241/319/apple-inc-apple-watch-clocks-minimalism-wallpaper-thumb.jpg');">
+          <div class="container">
+            <h1>TITAN CHRONOGRAPH ELITE</h1>
+            <p class="mb-4">Precision Engineered. Timeless Design. Unmatched Performance.</p>
+            <img src="w1.jpg.png" alt="Titan Men's Watch" class="img-fluid mb-4" style="max-width: 350px;">
+            <div>
+              <a href="#" class="btn btn-cta">SHOP NOW</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="hero" style="background-image: linear-gradient(rgba(10, 61, 98, 0.7), rgba(10, 61, 98, 0.7)), url('https://c4.wallpaperflare.com/wallpaper/2/241/319/apple-inc-apple-watch-clocks-minimalism-wallpaper-thumb.jpg');">
+          <div class="container">
+            <h1>CRAFTED FOR EXCELLENCE</h1>
+            <p class="mb-4">Swiss Movement. Premium Materials. 5-Year Warranty.</p>
+            <img src="w2.jpg.png" alt="Titan Watch Close-up" class="img-fluid mb-4" style="max-width: 350px;">
+            <div>
+              <a href="https://www.myntra.com/watches/titan/titan-men-black-analogue-watch-nm1733nm01/11795858/buy" class="btn btn-cta">SHOP NOW</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">Premium Features</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card feature-card p-4 text-center">
+            <div class="card-body">
+              <i class="fas fa-tachometer-alt feature-icon"></i>
+              <h3 class="card-title">Swiss Chronograph Movement</h3>
+              <p class="card-text">Precision engineering with Swiss-made movement for accurate timekeeping with chronograph functionality for timing events with split-second accuracy.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card p-4 text-center">
+            <div class="card-body">
+              <i class="fas fa-shield-alt feature-icon"></i>
+              <h3 class="card-title">Sapphire Crystal Glass</h3>
+              <p class="card-text">Scratch-resistant sapphire crystal glass provides exceptional clarity and durability, ensuring your watch face remains pristine for years.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card feature-card p-4 text-center">
+            <div class="card-body">
+              <i class="fas fa-water feature-icon"></i>
+              <h3 class="card-title">200M Water Resistance</h3>
+              <p class="card-text">Rated for 200 meters (660 feet) of water resistance, making it suitable for swimming, snorkeling, and recreational diving.</p>
+            </div>
+          </div>
+        </div>
+       
+       
+       
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2 class="section-title">Customer Testimonials</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="testimonial-item text-center">
+            <img src="r1.png" alt="James Richardson" class="testimonial-img">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"I really liked this watch. I wear this on occasionally, looks excellent."</p>
+            <h4 class="testimonial-author">- Tabrez Siddiqui | 28 Sept 2024</h4>
+           
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-item text-center">
+            <img src="r2.png" alt="Michael Torres" class="testimonial-img">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">""Perfect gift for my husband.. he loved it. Thank you"</p>
+            <h4 class="testimonial-author">- Vinita Sharma | 11 July 2021</h4>
+            
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-item text-center">
+            <img src="r3.jpg.png" alt="Robert Chen" class="testimonial-img">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-text">"The craftsmanship is exceptional, and it keeps perfect time. I've received countless compliments.!"</p>
+            <h4 class="testimonial-author">Robert Chen | 07 Aug 2024</h4>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="contact" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <select class="form-select" id="subject">
+                <option selected>Select a subject</option>
+                <option value="product-inquiry">Product Inquiry</option>
+                <option value="support">Customer Support</option>
+                <option value="warranty">Warranty Information</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Your message..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-cta w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer" id="contact">
+    <p>Contact us: <a href="mailto:info@dandiya.com">titan@gmail.com</a></p>
+    <p>phone:+91 7013386512</p>
+    <a href="https://www.facebook.com" style="color: white; text-decoration: none; font-size: 18px;"><i class="fa-brands fa-facebook"></i>Facebook</a>
+        </li>
+        <li style="display: inline; margin: 0 10px;">
+          
+            <a href="https://twitter.com" style="color: white; text-decoration: none; font-size: 18px;"><i class="fa-brands fa-square-twitter"></i>Twitter</a>
+        </li>
+        <li style="display: inline; margin: 0 10px;">
+            <a href="https://www.instagram.com" style="color: white; text-decoration: none; font-size: 18px;"><i class="fa-brands fa-instagram"></i>Instagram</a>
+</li> 
+</footer>
+
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

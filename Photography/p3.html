@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+       
+        .header-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://wallpapers.com/images/hd/hd-photography-of-camera-by-the-fallen-leaves-tcae37ar7goef06h.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 700px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 40px;
+        }
+        
+        .header-content h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .header-content p {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        
+       
+        .gallery-section {
+            padding: 5rem 0;
+        }
+        
+        .gallery-item {
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .gallery-caption {
+            padding: 1rem;
+            background-color: #fff;
+        }
+        
+       
+        .about-section {
+            background-color: #f9f9f9;
+            padding: 5rem 0;
+        }
+        
+        .about-content {
+            padding: 1.5rem;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .about-image {
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        
+        .contact-section {
+            padding: 1rem 0;
+        }
+        
+        .contact-form {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-control {
+            background: #2a2a2a;
+            color: white;
+            border: 1px solid #444;
+        }
+        .form-control::placeholder {
+            color: #bbb;
+        }
+        .btn-submit {
+            background: #444;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn-submit:hover {
+            background: #666;
+        }
+        
+       
+        .footer-section {
+            background-color: #333;
+            color: #fff;
+            padding: 3rem 0;
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        .social-icons {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #aaa;
+        }
+        
+        
+        .carousel-section {
+            margin-top: 3rem;
+            margin-bottom: 5rem;
+        }
+        
+        .carousel-item {
+            height: 500px;
+        }
+        
+        .carousel-item img {
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 1rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Aishwarya</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+ 
+    <header id="home" class="header-section">
+        <div class="header-content">
+            <h1>Aishwarya Sandlapuram</h1>
+            <p>Capturing Life's Beautiful Moments</p>
+        </div>
+    </header>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Gallery</h2>.
+                <p>Explore my latest work </p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxZ5dMGNARJ7hxCV3tBADdoDeFgPSmlII_Uw&s" alt="Urban Landscape">
+                        <div class="gallery-caption">
+                            <h5>Urban Landscape</h5>
+                            <p>Downtown skyline at sunset</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://img.wattpad.com/21ac6863c816cfea95adc942b395110976937809/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f3250356c5f53397761646d3170413d3d2d39382e3136636166333262303865626436363637303730323235303037352e6a7067?s=fit&w=720&h=720" alt="Portrait">
+                        <div class="gallery-caption">
+                            <h5>Portrait</h5>
+                            <p>Natural light portrait session</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrHRgR5F79nLk_X8EvQJiDVch0fpDKHgjbLg&s" alt="Nature">
+                        <div class="gallery-caption">
+                            <h5>Nature</h5>
+                            <p>Mountain lake at dawn</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkPn4Dt2VQ1taFWt94XjRZchJKKBWHna_cnw&s" alt="Street Photography">
+                        <div class="gallery-caption">
+                            <h5>Street Photography</h5>
+                            <p>Life in motion</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://www.adorama.com/alc/wp-content/uploads/2024/07/Photo-by-Kyle-Petzer-on-Unsplash-scaled-e1721050152487.jpg">
+                        <div class="gallery-caption">
+                            <h5>Wildlife</h5>
+                            <p>Birds in their natural habitat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ArDvdP40ETRyK-xJN9GVXINvQvUFlMBbMg&s" alt="Architecture">
+                        <div class="gallery-caption">
+                            <h5>Architecture</h5>
+                            <p>Modern building designs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://ereventphotography.co.uk/wp-content/uploads/2023/10/Burnley-Football-Club-Charity-Dinner-Hilton-Hotel-Manchester-1.jpg" alt="Travel">
+                        <div class="gallery-caption">
+                            <h5>Events</h5>
+                            <p>Exploring new horizons</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="https://media.greatbigphotographyworld.com/wp-content/uploads/2022/04/food-photographer-ideas.jpg">
+                        <div class="gallery-caption">
+                            <h5>Food</h5>
+                            <p>The small details of life</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="bw.jpg" alt="Black and White">
+                        <div class="gallery-caption">
+                            <h5>Black and White</h5>
+                            <p>Timeless monochrome art</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="carousel-section" style="margin-top: 0px;">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Featured Work</h2>
+                <p>A showcase of my best photography</p>
+            </div>
+            <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.onlymyhealth.com/imported/images/2022/May/24_May_2022/main_secondmarriages.jpg" class="d-block w-100" alt="Featured Photo 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Marraige</h5>
+                            <p>Traditional Indian Wedding</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.adorama.com/alc/wp-content/uploads/2022/05/Brandonwoelfel12.jpg" class="d-block w-100" alt="Featured Photo 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Portrait</h5>
+                            <p>Portraits For Auditions</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.pexels.com/photos/1895024/pexels-photo-1895024.jpeg" class="d-block w-100" alt="Featured Photo 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Nature</h5>
+                            <p>The power and beauty of the nature</p>
+                        </div>
+                    </div>
+                   
+                   
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>About Me</h2>
+                <p>Get to know the person behind the lens</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="about-image">
+                        <img src="AISH IMAGE.jpeg" alt="Photographer Portrait">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="about-content">
+                        <h3>Hello, I'm Aishwarya</h3>
+                        <p class="lead">A passionate photographer with over 3 years of experience capturing life's most beautiful moments.</p>
+                        <p>My journey in photography began when I was gifted my first camera at the age of 12. What started as a hobby quickly blossomed into a lifelong passion and career.
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <h5>Specialties</h5>
+                                <ul>
+                                    <li>Landscape Photography</li>
+                                    <li>Portrait Photography</li>
+                                    <li>Event Photography</li>
+                                    <li>Wildlife Photography</li>
+                                    <li>Travel Photography</li>
+                                </ul>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="contact" class="contact-section">
+        <div class="section-title">
+            <h2><center>Contact Me </center></h2>
+            
+    
+        
+    
+            <div class="contact-form">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Aishwarya Photography</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a>
+                    <a href="https://twitter.com"><i class="bi bi-twitter"></i></a>
+                   
+                    
+                </div>
+                <p>Email: aish@photography.com | Phone: +91 7013386512</p>
+                <p>AS Studio,Banglore</p>
+                <p>&copy; 2025 Aishwarya Photography. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
